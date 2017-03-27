@@ -11,8 +11,8 @@ namespace HomeWork3
         static void Main(string[] args)
         {
             Console.Write("Введите строку:");
-            WorkWithOneString test = new WorkWithOneString(Console.ReadLine());
-            test.ToConsole();
+            WorkWithOneString homeWorkClass = new WorkWithOneString(Console.ReadLine());
+            homeWorkClass.ToConsole();
            
         }
     }
