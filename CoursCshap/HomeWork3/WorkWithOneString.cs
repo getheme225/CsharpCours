@@ -78,7 +78,6 @@ namespace HomeWork3
                 Console.WriteLine("Ваша строка иммеет {0} Слов", NumberOfStringInPhrase(InputPhrase));
                 Console.WriteLine();
                 Console.WriteLine("Перевернутая строка : {0}", ReverseInputPharse());
-                
             }
             else Console.WriteLine("Ошибка- Вы ввели пустая строка");
             Console.Read();
