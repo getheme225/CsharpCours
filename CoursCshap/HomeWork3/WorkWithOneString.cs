@@ -8,25 +8,25 @@ namespace HomeWork3
 {
  public class WorkWithOneString
     {
-        private string InputPhrase;
-        private string[] InputPhraseToArray;
+        private string inputPhrase;
+        private string[] inputPhraseToArray;
         public WorkWithOneString(string _inputPhrase)
         {
-            InputPhrase = _inputPhrase;
+            inputPhrase = _inputPhrase;
         }
 
         private bool IsStringPalindrom()
         {
             int minIndex = 0;
-            int maxIndex = InputPhrase.Length - 1;
+            int maxIndex = inputPhrase.Length - 1;
             while (true)
             {
                 if (minIndex > maxIndex)
                 {
                     return true;
                 }
-                char a = InputPhrase[minIndex];
-                char b = InputPhrase[maxIndex];
+                char a = inputPhrase[minIndex];
+                char b = inputPhrase[maxIndex];
 
                 while (!char.IsLetterOrDigit(a))
                 {
@@ -35,7 +35,7 @@ namespace HomeWork3
                     {
                         return true;
                     }
-                    a = InputPhrase[minIndex];
+                    a = inputPhrase[minIndex];
                 }
 
                 while (!char.IsLetterOrDigit(b))
@@ -45,7 +45,7 @@ namespace HomeWork3
                     {
                         return true;
                     }
-                    b = InputPhrase[maxIndex];
+                    b = inputPhrase[maxIndex];
                 }
                 if (char.ToLower(a) != char.ToLower(b))
                 {
@@ -58,21 +58,21 @@ namespace HomeWork3
 
         private int NumberOfStringInPhrase()
         {           
-            InputPhraseToArray = InputPhrase.Split().ToArray();
-            return InputPhraseToArray.Length;
+            inputPhraseToArray = inputPhrase.Split().ToArray();
+            return inputPhraseToArray.Length;
         }
 
         private string ReverseInputPharse()
         {
-            Array.Reverse(InputPhraseToArray);
-            return string.Join(" ", InputPhraseToArray);
+            Array.Reverse(inputPhraseToArray);
+            return string.Join(" ", inputPhraseToArray);
         }
 
         public void ToConsole()
         {
-            if (!string.IsNullOrEmpty(InputPhrase))
+            if (!string.IsNullOrEmpty(inputPhrase))
             {
-                Console.WriteLine(InputPhrase + ":  {0}", IsStringPalindrom() ? "Палиандром" : "Не палиандром");
+                Console.WriteLine(inputPhrase + ":  {0}", IsStringPalindrom() ? "Палиандром" : "Не палиандром");
                 Console.WriteLine();
                 Console.WriteLine("Ваша строка иммеет {0} Слов", NumberOfStringInPhrase());
                 Console.WriteLine();
