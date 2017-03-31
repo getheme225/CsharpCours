@@ -8,7 +8,7 @@ namespace HomeWork4
 {
     public class Figures
     {
-        protected string name;
+        private string name;
         public Figures(string name)
         {
             this.name = name;
