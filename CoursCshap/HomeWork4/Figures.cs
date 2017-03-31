@@ -13,14 +13,17 @@ namespace HomeWork4
         {
             this.name = name;
         }
+
         public void Getname()
         {
             Console.WriteLine("Наша фигура: " + name);
         }
+
         public virtual float Perimeter()
         {
             return default(float);
         }
+
         public virtual float Surface()
         {
             return default(float);
