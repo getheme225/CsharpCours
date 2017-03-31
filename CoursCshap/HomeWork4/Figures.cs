@@ -16,7 +16,7 @@ namespace HomeWork4
 
         public void PrintName()
         {
-            Console.WriteLine("Наша фигура: " + name);
+            Console.WriteLine(string.IsNullOrEmpty(name) ?"Не известная фигра": $"Наша фигура : {name} ");
         }
 
         public virtual float Perimeter()
