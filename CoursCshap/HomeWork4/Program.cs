@@ -11,22 +11,22 @@ namespace HomeWork4
         static void Main(string[] args)
         {
             Figures rectangle = new Rectangle(2, 3, "Прямоугольник");
-            rectangle.Getname();
+            rectangle.PrintName();
             Console.WriteLine("Периметр : " + rectangle.Perimeter());
             Console.WriteLine("Площад : " + rectangle.Surface() + "\n");
 
             Figures triangle = new Triangle(10, 20, 25, "Треугольник");
-            triangle.Getname();
+            triangle.PrintName();
             Console.WriteLine("Периметр : " + triangle.Perimeter());
             Console.WriteLine("Площад : " + triangle.Surface() + "\n");
 
             Figures circle = new Circle(5, "Круг");
-            circle.Getname();
+            circle.PrintName();
             Console.WriteLine("Периметр : " + circle.Perimeter());
             Console.WriteLine("Площад : " + circle.Surface() + "\n");
 
             Figures circularSector = new CircularSector(2, 5, "Сектор");
-            circularSector.Getname();
+            circularSector.PrintName();
             Console.WriteLine("Периметр : " + circularSector.Perimeter());
             Console.WriteLine("Площад : " + circle.Surface() + "\n");
             Console.Read();

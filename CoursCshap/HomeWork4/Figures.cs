@@ -14,7 +14,7 @@ namespace HomeWork4
             this.name = name;
         }
 
-        public void Getname()
+        public void PrintName()
         {
             Console.WriteLine("Наша фигура: " + name);
         }
