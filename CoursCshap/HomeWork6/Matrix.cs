@@ -127,14 +127,14 @@ namespace HomeWork6
             double sign = 1, result = 0;
             for (uint i = 0; i < matrix.NumberOfColums; i++)
             {
-                Matrix minorDoubleMatrix = GetminorDoublesMatrix(matrix, i);
+                Matrix minorDoubleMatrix = GetminorMatrix(matrix, i);
                 result += sign * matrix[0, i] * GetDeterminant(minorDoubleMatrix);
                 sign = -sign;
             }
             return result;
         }
 
-        private Matrix GetminorDoublesMatrix(Matrix minorMatrix, uint minorPosition)
+        private Matrix GetminorMatrix(Matrix minorMatrix, uint minorPosition)
         {
             Matrix resultMinor = new Matrix(minorMatrix.NumberOfColums - 1, minorMatrix.NumberOfRows - 1);
             for (uint i = 1; i < minorMatrix.NumberOfColums; i++)
