@@ -124,7 +124,6 @@ namespace HomeWork6
                 return (matrix[0, 0] * matrix[1, 1]) -
                        (matrix[0, 1] * matrix[1, 0]);
             }
-
             double sign = 1, result = 0;
             for (uint i = 0; i < matrix.NumberOfColums; i++)
             {
