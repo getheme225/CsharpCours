@@ -44,13 +44,12 @@ namespace HomeWork6
 
             Matrix tMatrixA = matrixA.TransposedMatrix;
             ConsoleWriteMatrix(tMatrixA, Operation.TransposeMatrix);
-
             Console.WriteLine($"Определителя матрица А = {matrixA.Det}");
             Console.Read();
         }
 
         private static void PrintMatrix(Matrix matrix)
-        {
+        {         
             for (uint i = 0; i < matrix.NumberOfColums; i++)
             {
                 for (uint j = 0; j <matrix.NumberOfRows; j++)

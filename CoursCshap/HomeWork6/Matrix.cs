@@ -49,15 +49,7 @@ namespace HomeWork6
 
         public static Matrix operator +(Matrix firstMatrix, double number)
         {
-            Matrix resultMatrix = new Matrix(firstMatrix.NumberOfColums, firstMatrix.NumberOfRows);
-            for (uint i = 0; i < resultMatrix.NumberOfColums; i++)
-            {
-                for (uint j = 0; j < resultMatrix.NumberOfRows; j++)
-                {
-                    resultMatrix[i, j] = firstMatrix[i, j] + number;
-                }
-            }
-            return resultMatrix;
+            throw new Exception("Нельзя сложить матрицу с числом");
         }
 
         public static Matrix operator *(Matrix firstMatrix, Matrix secondMatrix)
@@ -71,7 +63,7 @@ namespace HomeWork6
                     {
                         for (uint r = 0; r < secondMatrix.NumberOfRows; r++)
                         {
-                            resultMatrix[i, j] = firstMatrix[i, r] * secondMatrix[r, j];
+                            resultMatrix[i, j] += firstMatrix[i, r] * secondMatrix[r, j];
                         }
                     }
                 }
