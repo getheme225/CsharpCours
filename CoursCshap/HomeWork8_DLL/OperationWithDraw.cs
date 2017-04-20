@@ -16,10 +16,7 @@ namespace HomeWork8_DLL
         {
             if (Account?.CurrentAmount > amountToWithDraw)
             {
-                Account.CurrentAmount -= amountToWithDraw;
-                message =
-                    $"На Счет № {Account.AccountNumber} списана {amountToWithDraw} \n Баланс :{Account.CurrentAmount}";
-                return true;
+                return Account.CanWithDraw(amountToWithDraw, out message);
             }
             message = (Account != null) ? "Недостоточно средств" : "Это Счет не сушкетсвует";
             return false;

@@ -21,7 +21,7 @@ namespace HomeWork8_DLL
                 message = "Счет не существует";
                 return false;
             }
-            Account.CurrentAmount += depositAmount;
+            Account.Deposite(depositAmount);
             message = $" Счет №: {Account.AccountNumber} попопльнен на {depositAmount}";
             return true;
         }
